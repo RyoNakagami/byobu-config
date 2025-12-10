@@ -1,0 +1,11 @@
+name: byobu-config
+version: "0.0.0"
+description: "Personal Byobu/Tmux configuration and setup scripts."
+author: "Ryo Nakagami"
+license: MIT
+
+scripts:
+  install: "install.sh"
+
+install_source_dir: "byobu"
+install_target_dir: "~/.byobu"

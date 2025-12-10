@@ -1,0 +1,12 @@
+meta-data:
+  repository_name: byobu-config
+  visibility: public
+  org-name: RyoNakagami
+  tag:
+    - byobu
+    - tmux
+    - configuration
+    - config
+  description: |
+    Personal Byobu/Tmux configuration and setup scripts.
+  license: mit
