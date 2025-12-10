@@ -33,9 +33,10 @@
 
 ## Installation
 
+セットアップ前に `.bak` などで既存の `~/.byobu` ディレクトリをバックアップしておくことを推奨します．
+
 1. `/byobu_config` を`~/.byobu`にコピーする or `bash install.sh`を実行する
 2. `/bin`ディレクトリのファイルに関してはコピー時に実行権限を`chmod +x`で付与する
-
 
 ## Dependency
 
