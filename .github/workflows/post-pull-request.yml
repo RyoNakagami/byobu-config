@@ -49,7 +49,7 @@ jobs:
       - name: Extract version from project.yml
         id: get_version
         run: |
-          VERSION=$(uv run python -c "import tomllib; print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          VERSION=$(yamlcli project.yml --to-json | jq -r '.["version"]')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       # -------------------------------
