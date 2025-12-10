@@ -1,5 +1,5 @@
 name: byobu-config
-version: "0.1.0"
+version: "0.1.1"
 description: "Personal Byobu/Tmux configuration and setup scripts."
 author: "Ryo Nakagami"
 license: MIT
