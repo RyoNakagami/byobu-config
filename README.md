@@ -12,9 +12,30 @@
 - `/byobu_config`は `~/.byobu` ディレクトリのうち特にユーザー側で変更したスクリプトを格納
 - 基本的にはUbuntu OSを想定したセットアップを実施している
 
-## How to use
+## 機能
 
-1. `/byobu_config` を`~/.byobu`にコピーする
+![display picture](./img/byobu_image.png)
+
+**Left Status**
+
+- OS 情報
+- hostname
+- Window 情報
+
+**Right Status**
+
+- reboot required の有無
+- CPU使用率
+- メモリ使用率
+- Disk使用率
+- GPU使用率 / VRAM使用率
+- uptime
+
+## Installation
+
+セットアップ前に `.bak` などで既存の `~/.byobu` ディレクトリをバックアップしておくことを推奨します．
+
+1. `/byobu_config` を`~/.byobu`にコピーする or `bash install.sh`を実行する
 2. `/bin`ディレクトリのファイルに関してはコピー時に実行権限を`chmod +x`で付与する
 
 ## Dependency

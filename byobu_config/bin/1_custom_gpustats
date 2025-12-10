@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Run gpustat and capture output
+RAW_OUTPUT=$(gpustat | tail -n +2)
+
+# Extract GPU utilization percentages
+GPU_USAGE=$(echo "$RAW_OUTPUT" | gpustat | tail -n +2 | egrep -o "[0-9]{1,} %" | sed 's/\s//' )
+GPU_USAGE_digits=$(printf "%3d" "${GPU_USAGE}"; printf "%s" "%%";)
+# Sum VRAM usage
+VRAM_SUM=$(echo "$RAW_OUTPUT" | awk '{ used += $11; total += $13 } END { printf "%2.1f/%.0fGB", used / 1024, total / 1024 }')
+
+# Format the final output
+FINAL_OUTPUT="GPU:$GPU_USAGE_digits;$VRAM_SUM"
+echo "$FINAL_OUTPUT"
